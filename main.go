@@ -21,10 +21,11 @@ const htmlContent = `
             min-height: 100vh;
             background-color: #f0f0f0;
             margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         .heart {
             font-size: 100px;
-            color: red;
+            color: fuchsia; /* Фуксивный цвет */
             animation: pulse 1s ease infinite;
             cursor: pointer;
         }
@@ -40,24 +41,30 @@ const htmlContent = `
         }
         footer {
             width: 100%;
-            background-color: #ddd;
+            background: linear-gradient(90deg, #20B2AA, #DE3163); /* Градиент от морского к вишнёвому */
+            color: #fff;
             text-align: center;
-            padding: 10px 0;
+            padding: 15px 0;
             position: fixed;
             bottom: 0;
             left: 0;
             display: flex;
             align-items: center;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
         }
         .gitea-button {
             margin-left: 20px;
-            font-size: 18px;
-            padding: 10px 20px;
+            padding: 0 20px;
             cursor: pointer;
+        }
+        .gitea-button img {
+            height: 30px;
+            vertical-align: middle;
         }
         footer p {
             flex-grow: 1;
             margin: 0;
+            font-size: 16px;
         }
     </style>
 </head>
@@ -65,16 +72,9 @@ const htmlContent = `
     <div class="heart" onclick="showMessage()">❤️</div>
     <div id="message" class="message">Спасибо за посещение сайта, скоро всё будет</div>
 
-    <!-- Убираем кнопку Gitea с прежнего места -->
-    <!--
-    <a href="https://gitea.vos9.su" class="gitea-button">
-        <img src="https://gitea.vos9.su/assets/img/logo.svg" alt="Gitea Logo">	
-    </a>
-    -->
-
-    <!-- Добавляем футер -->
+    <!-- Футер -->
     <footer>
-        <!-- Перемещаем кнопку Gitea в футер -->
+        <!-- Кнопка Gitea -->
         <a href="https://gitea.vos9.su" class="gitea-button">
             <img src="https://gitea.vos9.su/assets/img/logo.svg" alt="Gitea Logo">	
         </a>
